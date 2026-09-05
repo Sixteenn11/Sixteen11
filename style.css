@@ -1,0 +1,239 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: #d4a45a;
+}
+
+
+/* =========================
+   LOADING SCREEN
+========================= */
+
+.loading-screen {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #d4a45a;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+.loader {
+    position: relative;
+
+    width: 300px;
+    height: 300px;
+}
+
+
+/* =========================
+   GREEN SYSTEM
+========================= */
+
+.green-loader {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 0;
+    left: 0;
+
+    overflow: visible;
+
+    animation: greenRotate 4s linear infinite;
+}
+
+
+/* Green cream base */
+
+.green-loader .cream-circle {
+    fill: none;
+
+    stroke: #f9e9d7;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+}
+
+
+/* Green arc */
+
+.green-circle {
+    fill: none;
+
+    stroke: #063c2c;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 339 113;
+}
+
+
+/* =========================
+   RED SYSTEM
+========================= */
+
+.red-loader {
+    position: absolute;
+
+    width: 262px;
+    height: 262px;
+
+    top: 19px;
+    left: 19px;
+
+    overflow: visible;
+
+    animation: redRotate 3.2s linear infinite reverse;
+}
+
+
+/* Red cream base */
+
+.red-loader .cream-circle {
+    fill: none;
+
+    stroke: #f9e9d7;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+}
+
+
+/* Red arc */
+
+.red-circle {
+    fill: none;
+
+    stroke: #7b1816;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 273 91;
+}
+
+
+/* =========================
+   CENTER LOGO
+========================= */
+
+.monogram {
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+
+    object-fit: contain;
+
+    z-index: 10;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes greenRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes redRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .loader {
+        width: 130px;
+        height: 130px;
+    }
+
+    .green-loader {
+        width: 130px;
+        height: 130px;
+    }
+
+    .red-loader {
+        width: 114px;
+        height: 114px;
+
+        top: 8px;
+        left: 8px;
+    }
+
+    .monogram {
+        width: 48px;
+        height: 48px;
+    }
+
+}
